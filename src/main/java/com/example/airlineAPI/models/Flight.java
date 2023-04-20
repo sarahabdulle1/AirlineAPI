@@ -1,10 +1,8 @@
 package com.example.airlineAPI.models;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
-import org.springframework.beans.factory.parsing.PassThroughSourceExtractor;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

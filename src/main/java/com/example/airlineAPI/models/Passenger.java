@@ -2,7 +2,6 @@ package com.example.airlineAPI.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.List;
 @Entity
 @Table(name ="passengers")
 public class Passenger {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,5 +63,12 @@ public class Passenger {
 
     public void setFlights(List<Flight> flights) {
         this.flights = flights;
+    }
+
+    public void addFlight(Flight flight){
+        this.flights.add(flight);
+    }
+    public void removeFlight(Flight flight){
+        this.flights.remove(flight);
     }
 }
